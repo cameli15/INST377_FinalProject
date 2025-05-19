@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>INST377 - Weatherly</title>
+  <link rel="stylesheet" href="styles.css">  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header id="bar">
+    <h1>Weatherly</h1>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="help.html">Weatherly</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-box">
+      <h2>Get Local Weather</h2>
+      <p>Enter a city and state abbreviation to see the current weather, plus detailed hourly and daily forecasts.</p>
+      <form id="locationForm">
+        <label for="cityName">City:</label>
+        <input type="text" id="cityName" placeholder="e.g. Los Angeles" required>
+
+        <label for="stateCode">State (2-letter code):</label>
+        <input type="text" id="stateCode" placeholder="e.g. CA" maxlength="2" required>
+
+        <button class="button-73" type="submit">Get Weather</button>
+        <button class="button-73" type="button" id="saveLocationButton">Save Location</button>
+      </form>
+      <div id="submissionMessage"></div>
+    </section>
+
+    <section class="content-box" id="weatherDisplay"></section>
+
+    <section class="content-box">
+      <h2>Forecast Charts</h2>
+      <p>This chart displays the temperature for the next 12 hours.</p>
+      <canvas id="hourlyChart" width="400" height="200"></canvas>
+      <canvas id="dailyChart" width="400" height="200"></canvas>
+    </section>
+
+    <section class="content-box">
+      <h2>Saved Locations</h2>
+      <div id="savedLocations"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 INST377 Final Project - Cinthia Contreras</p>
+  </footer>
+</body>
+</html>
