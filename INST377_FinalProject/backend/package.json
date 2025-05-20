@@ -1,13 +1,30 @@
 {
   "name": "weatherly-backend",
   "version": "1.0.0",
+  "description": "Weatherly backend server for saving and retrieving locations using Supabase",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
-    },
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cameli15/INST377_FinalProject"
+  },
+  "author": "Cinthia Contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameli15/INST377_FinalProject/issues"
+  },
+  "homepage": "https://github.com/cameli15/INST377_FinalProject#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "@supabase/supabase-js": "^2.49.4",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "usa-state-validator": "^1.0.6"
   }
-} 
+}
